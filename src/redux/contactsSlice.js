@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { fetchContacts } from './contactsOps';
 
 const contactsSlice = createSlice({
   name: 'userContacts',
@@ -17,6 +18,14 @@ const contactsSlice = createSlice({
     deleteContact(state, action) {
       state.items = state.items.filter(item => item.id !== action.payload);
     },
+  },
+  extraReducers: builder => {
+    builder.addCase(fetchContacts.fulfilled, (state, action) => {
+      state.items = action.payload;
+    });
+    // .addCase(deleteContact.fulfilled, (state, action) => {
+    //   state.items = state.items.filter(item => item.id !== action.payload);
+    // });
   },
 });
 

@@ -44,7 +44,7 @@ const ContactForm = () => {
               type="text"
               className={css.text}
               name="number"
-              placeholder="256-17-88"
+              placeholder="256-172-8856"
             />
             <ErrorMessage
               className={css.errorMessage}
