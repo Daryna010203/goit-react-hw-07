@@ -1,0 +1,16 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 12px;
+}
+
+.contact {
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid black;
+  padding: 12px 20px;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+}

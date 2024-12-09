@@ -1,0 +1,20 @@
+.search {
+  padding: 12px;
+}
+
+.text {
+  margin-bottom: 12px;
+}
+
+.input {
+  width: 400px;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--text-color);
+}
+
+.input:hover,
+.input:focus {
+  border: 1px solid #646cff;
+  outline: none;
+}
