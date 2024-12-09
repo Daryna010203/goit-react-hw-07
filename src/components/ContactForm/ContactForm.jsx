@@ -3,18 +3,13 @@ import { AddProfileSchema } from '../schemas';
 import css from './ContactForm.module.css';
 
 import { useDispatch } from 'react-redux';
-import { nanoid } from 'nanoid';
 import { addContact } from '../../redux/contactsOps';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = (values, { resetForm }) => {
-    const formData = {
-      ...values,
-      id: nanoid(),
-    };
-    dispatch(addContact(formData));
+  const handleSubmit = (id, { resetForm }) => {
+    dispatch(addContact(id));
     resetForm();
   };
 
