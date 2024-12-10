@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoading } from '../../redux/contactsSlice.js';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contactsOps.js';
+import Loader from '../Loader/Loader.jsx';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const App = () => {
         <h1>Phonebook</h1>
         <ContactForm />
         <SearchBox />
-        {isLoading && <h2>Loading...</h2>}
+        {isLoading && <Loader />}
         <ContactList />
       </Layout>
     </>

@@ -1,15 +1,14 @@
-import { Field, Form, Formik, ErrorMessage } from 'formik';
-import { AddProfileSchema } from '../schemas';
 import css from './ContactForm.module.css';
 
+import { Field, Form, Formik, ErrorMessage } from 'formik';
+import { AddProfileSchema } from '../schemas';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contactsOps';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-
-  const handleSubmit = (id, { resetForm }) => {
-    dispatch(addContact(id));
+  const handleSubmit = (values, { resetForm }) => {
+    dispatch(addContact(values));
     resetForm();
   };
 
